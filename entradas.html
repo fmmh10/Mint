@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MINT|Entradas</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="try.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+<body onload="load_store()">
+  <div class="titulo">
+    <h1><a href="menu_2.html">MINT</a></h1>
+  </div>
+
+  <div class="chamei"><p>Um empregado virá à sua mesa em breve. Queira por favor aguardar!</p>
+  </div>
+
+  <div class="choices">
+    <button type="button" class="btn btn-primary" onclick="window.location.href='entradas.html'" id="active">Entradas</button>
+    <button type="button" class="btn btn-primary" onclick="window.location.href='pratos_dia.html'">Pratos do Dia</button>
+    <button type="button" class="btn btn-primary" onclick="window.location.href='favoritos.html'">Favoritos</button>
+    <button type="button" class="btn btn-primary" onclick="window.location.href='ementa.html'">Pratos</button>
+    <button type="button" class="btn btn-primary" onclick="window.location.href='bebidas.html'">Bebidas</button>
+    <button type="button" class="btn btn-primary" onclick="window.location.href='sobremesas.html'">Sobremesas</button>
+    <button type="button" class="btn btn-primary" onclick="window.location.href='reservas.html'">Reservas</button>
+  </div>
+
+
+  <div class="pedido">
+    <h3 class="align">Meu Pedido</h3>
+    <button type="button" onclick="clear_storage()" class="btn btn-danger">Limpar pedido</button>
+    <p class="align" id="nada_adicionado">Ainda não adicionou nada ao seu pedido</p>
+    <ul id="nada_ao_pedido">
+
+    </ul>
+    <h3>Total a pagar: <span id="total_a_pagar">0</span>€</h3>
+    <button id="concluir" type="button" name="concluir" class="btn btn-success" onclick="check_pay()">Concluir</button>
+  </div>
+  <div class="lista_final">
+    <div class="filterDiv">
+      <div class="imagem_comida">
+      <img src="ameijoas.jpg" alt="ameijoas">
+      <span id="nome_do_artigo40">Ameijoas </span>:<span id="price40">7.99 </span>€
+      <button type="button" name="button" id="adicionar_item" class="btn btn-primary btn-md" onclick="preco_acumulado('price40', 'ameijoas','nome_do_artigo40')">Adicionar ao carrinho</button>
+    </div>
+    <div class="quantidade">
+      <button type="button" id="button_menos" onclick="menos('ameijoas')">-</button>
+      <p id="ameijoas">1</p>
+      <button type="button" name="button_mais" onclick="mais('ameijoas')">+</button>
+      <button class="info"><img src="info.png" alt="info"></button>
+    </div>
+  </div>
+  <div class="filterDiv">
+    <div class="imagem_comida">
+      <img src="pao-de-alho.jpg" alt="Pão de Alho">
+      <span id="nome_do_artigo41">Pão de Alho</span>:<span id="price41">8.99 </span>€
+      <button type="button" name="button" id="adicionar_item" class="btn btn-primary btn-md" onclick="preco_acumulado('price41', 'pao-de-alho', 'nome_do_artigo41')" >Adicionar ao carrinho</button>
+    </div>
+    <div class="quantidade">
+      <button type="button" id="button_menos" onclick="menos('pao-de-alho')">-</button>
+      <p id="pao-de-alho">1</p>
+      <button type="button" name="button_mais" onclick="mais('pao-de-alho')">+</button>
+      <button class="info"><img src="info.png" alt="info"></button>
+
+    </div>
+  </div>
+  <div class="filterDiv">
+    <div class="imagem_comida">
+      <img src="tostas-queijo.jpg" alt="Tostas de Queijo">
+      <span id="nome_do_artigo42">Tostas de Queijo</span>:<span id="price42">7.99 </span>€
+      <button type="button" name="button" id="adicionar_item" class="btn btn-primary btn-md" onclick="preco_acumulado('price42', 'tostas-queijo', 'nome_do_artigo42')">Adicionar ao carrinho</button>
+    </div>
+    <div class="quantidade">
+      <button type="button" id="button_menos" onclick="menos('tostas-queijo')">-</button>
+      <p id="tostas-queijo">1</p>
+      <button type="button" name="button_mais" onclick="mais('tostas-queijo')">+</button>
+      <button class="info"><img src="info.png" alt="info"></button>
+
+    </div>
+  </div>
+  <div class="filterDiv">
+    <div class="imagem_comida">
+      <img src="croquetes.jpg" alt="Croquetes">
+      <span id="nome_do_artigo43">Croquetes</span>:<span id="price43">8.99 </span>€
+      <button type="button" name="button" id="adicionar_item" class="btn btn-primary btn-md" onclick="preco_acumulado('price43', 'croquetes', 'nome_do_artigo43')">Adicionar ao carrinho</button>
+    </div>
+    <div class="quantidade">
+      <button type="button" id="button_menos" onclick="menos('croquetes')">-</button>
+      <p id="croquetes">1</p>
+      <button type="button" name="button_mais" onclick="mais('croquetes')">+</button>
+      <button class="info"><img src="info.png" alt="info"></button>
+
+    </div>
+  </div>
+  <div class="filterDiv">
+    <div class="imagem_comida">
+      <img src="rissois-camarao.jpg" alt="Rissois Camarão">
+      <span id="nome_do_artigo44">Rissois Camarão</span>:<span id="price44">8.99 </span>€
+      <button type="button" name="button" id="adicionar_item" class="btn btn-primary btn-md" onclick="preco_acumulado('price44', 'rissois-camarao', 'nome_do_artigo44')">Adicionar ao carrinho</button>
+    </div>
+    <div class="quantidade">
+      <button type="button" id="button_menos" onclick="menos('rissois-camarao')">-</button>
+      <p id="rissois-camarao">1</p>
+      <button type="button" name="button_mais" onclick="mais('rissois-camarao')">+</button>
+      <button class="info"><img src="info.png" alt="info"></button>
+
+    </div>
+  </div>
+
+</div>
+  <button id="empregadoFav" class="chamei_empregado">Chamar empregado</button>
+
+<border>
+    <button type="button" name="button" class="arrow" onclick="check_user()">Menu Principal</button>
+</border>
+</body>
+</html>

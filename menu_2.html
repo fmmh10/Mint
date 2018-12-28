@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MINT</title>
+  <meta charset="utf-8">
+  <link type="text/css" rel="stylesheet" href="style.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="try.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body onload="load()">
+  <div class="titulo">
+    <h1><a href="menu_2.html">MINT</a></h1>
+  </div>
+
+  <div class="pedido">
+    <h3 class="align">Meu Pedido</h3>
+    <button type="button" onclick="clear_storage()" class="btn btn-danger">Limpar pedido</button>
+    <p class="align" id="nada_adicionado">Ainda não adicionou nada ao seu pedido</p>
+    <ul id="nada_ao_pedido">
+
+    </ul>
+    <h3>Total a pagar: <span id="total_a_pagar">0</span>€</h3>
+    <button id="concluir" type="button" name="concluir" class="btn btn-success" onclick="check_pay()">Concluir</button>
+  </div>
+
+  <div class="login">
+    <p class="align">Bem-Vindo, <span id="utilizador"></span>!</p>
+    <div id="after_login">
+      <p class="align"><a href="settings.html">Definições</a></p>
+      <p class="align" onclick="exit()"><a href="index.html">Desconectar</a></p>
+    </div>    
+  </div>
+  <div class="surround_choices">
+    <div class="index_choices">
+      <p class="align"><a href="pratos_dia.html">Pratos do dia</a></p>
+    </div>
+    <div class="index_choices">
+      <p class="align"><a href="favoritos.html">Favoritos</p></a>
+    </div>
+    <div class="index_choices">
+      <p class="align"><a href="ementa.html">Ementa</p></a>
+    </div>
+    <div class="index_choices">
+      <p class="align"><a href="bebidas.html">Bebidas</p></a>
+    </div>
+    <div class="index_choices">
+      <p class="align"><a href="reservas.html">Reservas</p></a>
+    </div>
+    <div class="index_choices">
+      <p class="align"><a href="entretenimento.html">Entretenimento</p></a>
+    </div>
+  </div>
+  
+</body>
+</html>

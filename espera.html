@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MINT|Espera</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="try.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+<body onload="move()">
+
+    <div class="titulo">
+            <h1><a href="menu_2.html"></a>MINT</h1>
+    </div>
+    <h3 id="espera">O seu pedido está a ser preparado, queria aguardar</h3>
+
+    <div id="myProgress">
+        <div id="myBar">0%</div>
+    </div>
+    <h4 id="espera_pedido">O seu pedido:</h4>
+    <div id="espera_lista">
+      <ul id="lista_final">
+
+        <!--aqui vai entrar os valores passados na página anterior-->
+      </ul>
+      <h3>Total a pagar: <span id="final_a_pagar">0</span>€</h3>
+    </div>
+
+    <div id="paypalconcluido">
+      <p>Pagamento efectuado com sucesso! Esperamos vê-lo novamente no nosso restaurante!</p>
+      <button type="button" class="btn btn-danger" onclick="window.location.href='entretenimento.html'">Sair</button>
+    </div>
+
+    <div id="chamei">
+      <p>Um empregado virá em breve para finalizar o pagamento!</p>
+      <button type="button" class="btn btn-danger" onclick="window.location.href='entretenimento.html'">Sair</button>
+    </div>
+
+    <button id="voltar" type="button" name="voltar" class="btn btn-danger" onclick="window.location.href='ementa.html'">Voltar</button>
+    <button id="confirmar_ementa" type="button" name="concluir" data-toggle="modal" data-target="#pagar" class="btn btn-success" >Pagar</button>
+
+    <div id="pagar" class="modal fade" data-backdrop="" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Pagamento</h2>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">Deseja pagar com:</div>
+          <a href="paypal.html"><img class="payment_options" src="paypal.png" alt="Pay-Pal"></a>
+          <a href="entretenimento.html"><img id="cash" class="payment_options" src="cash.png" alt="Dinheiro Vivo"></a>
+          <a href="entretenimento.html"><img id="credit" class="payment_options" src="multibanco.png" alt="Multibanco"></a>
+        </div>
+      </div>
+    </div>
+
+
+</body>
+</html>

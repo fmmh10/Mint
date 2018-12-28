@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MINT</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="try.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+<body>
+  <div class="titulo">
+    <h1>MINT</h1>
+  </div>
+
+  <div class="chamei"><p>Dados registados com sucesso!</p>
+  <button type="button" name="check" onclick="location.href = 'settings.html';">Voltar à pagina das definições</button>
+  </div>
+
+  <div class="dadosPagamento">
+    <div class="imagemMetodo">
+    <img src="paypalPagar.png" alt="paypal">
+    </div>
+    <form action="entretenimento.html">
+      <div class="form-group">
+        <label for="name">E-MAIL:</label>
+        <input type="email" class="form-control" id="email" placeholder="Indique o e-mail associado à sua conta PayPal." name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="email">PASSWORD:</label>
+        <input type="text" class="form-control" id="pw" placeholder="Indique a password associada à sua conta PayPal." name="pw" required>
+      </div>
+      <button type="submit" onclick="pagamento_paypal()" class="btn btn-default">Iniciar sessão</button>
+      <button type="button" class="btn btn-default" onclick="location.href = 'espera.html';">Voltar</button>
+    </form>
+  </div>

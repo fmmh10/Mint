@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MINT|Registo</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="try.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+<body>
+  <div class="titulo">
+    <h1><a href="menu_2.html">MINT</a></h1>
+  </div>
+
+  <div class="registo">
+    <h2>REGISTO</h2>
+    <form action="menu_2.html" id="registar">
+      <div class="form-group">
+        <label for="name">NOME COMPLETO:</label>
+        <input type="text" class="form-control" id="name" placeholder="Nome Completo" name="name">
+      </div>
+      <div class="form-group">
+        <label for="email">E-MAIL:</label>
+        <input type="email" class="form-control" id="email" placeholder="Introduzir email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="age">DATA DE NASCIMENTO:</label>
+        <input type="date" class="form-control" id="age" name="age">
+      </div>
+
+      <div class="form-group">
+        <label for="alergico">ALÉRGICO A:</label>
+        <div class="checkbox">
+          <label><input type="checkbox" name="optradio">Leite de vaca</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" name="optradio">Ovo</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" name="optradio">Frutos secos</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" name="optradio">Marisco</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" name="optradio">Outro</label>
+          <label><input type="text" class="form-control" name="optradio"></label> <!--desable the button, until clicks in outro -->
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="username">USERNAME:</label>
+        <input type="text" class="form-control" id="username" placeholder="Username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="pwd">PASSWORD:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Introduzir password" name="pwd" required>
+      </div>
+      <div class="form-group">
+        <label for="pwd">REPETIR PASSWORD:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Introduzir password" name="pwd" required>
+      </div>
+      <button type="submit" onclick="registo()" class="btn btn-default">Submeter</button>
+    </form>
+  </div>
+
+  <border>
+      <button type="button" name="button" class="arrow" onclick="check_user()">Menu Principal</button>
+  </border>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MINT|Definições</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="try.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+<body>
+  <div class="titulo">
+    <h1><a href="menu_2.html">MINT</a></h1>
+  </div>
+
+
+  <h2>Definições</h2>
+
+  <button id="empregadoFav" class="chamei_empregado">Chamar empregado</button>
+
+  <div class="chamei"><p>Um empregado virá à sua mesa em breve. Queira por favor aguardar!</p></div>
+
+  <div class="settings">
+    <div class="opcoesMudar">
+      <form action="menu_2.html" id="settings">
+        <div class="form-group">
+          <label for="name">ALTERAR O NOME COMPLETO:</label>
+          <input type="text" class="form-control" id="name" placeholder="Introduzir novo nome completo" name="name">
+        </div>
+        <div class="form-group">
+          <label for="email">ALTERAR O E-MAIL:</label>
+          <input type="email" class="form-control" id="email" placeholder="Introduzir novo email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="age">ALTERAR A DATA DE NASCIMENTO:</label>
+          <input type="date" class="form-control" id="age" placeholder="Introduzir nova data de nascimento" name="age">
+        </div>
+        <div class="form-group">
+          <div class="checkbox">
+            <label><input type="checkbox" value="">Leite de Vaca</label>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" value="">Ovo</label>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" value="">Frutos Secos</label>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" value="">Marisco</label>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" value="">Outro</label> <br>
+            <label><input type="text" class="form-control" name="checkbox_option"></label> <!--desable the button, until clicks in outro -->
+          </div>
+          <div class="form-group">
+            <label for="username">ALTERAR O USERNAME:</label>
+            <input type="username" class="form-control" id="username" placeholder="Introduzir novo username" name="username" required>
+            <label for="pwd">ALTERAR A PASSWORD:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Introduzir nova password" name="pwd" required>
+            <button type="submit" class="btn btn-default" onclick="settings()">Submeter</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <border>
+    <div class="arrow">
+      <p><a href="menu_2.html">Menu Principal</a></p>
+    </div>
+  </border>
+</body>
+</html>
